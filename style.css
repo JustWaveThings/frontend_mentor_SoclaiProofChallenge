@@ -122,6 +122,7 @@ body {
   line-height: 1.6;
   font-family: 'League Spartan', sans-serif;
   font-size: 15px;
+  
 }
 
 ol,
@@ -148,20 +149,26 @@ table {
 }
 
 /* END CSS RESET */
-
-body * {
-  border: 3px solid pink;
-}
-
+ 
 body{
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right bottom;
+}
+body * {
+  border-radius: 12.5px;
+  overflow: hidden;
 }
 
 .container{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 80vh;
+  width: 80vw;
   justify-content: center;
   align-items: center;
 }
@@ -175,6 +182,9 @@ body{
 }
 
 .heading-with-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 50%;
   height: 100%;
 }
@@ -184,13 +194,15 @@ body{
   font-size: 3.5em;
   color: var(--color-Very-Dark-Magenta);
   line-height: 1em;
-  width: 50%;
+  width: 70%;
 }
 
 .heading-copy {
-  font-size: 1.2em;
-  width: 60%;
+  font-weight: 500;
+  font-size: 1.4em;
+  width: 90%;
   color: var(--color-DarkGrayishMagenta);
+
 }
 
 .stars-container {
@@ -203,10 +215,10 @@ body{
 
 .sub-star-container {
   display: flex;
-  height: 8%;
+  height: 18%;
   width: 80%;
   background-color: var(--color-LightGrayishMagenta);
-  margin-top: 2%;
+  margin-top: 4%;
   align-items: center;
 }
 
@@ -229,9 +241,11 @@ body{
   padding-right: 5%;
 }
 
-.sub-star-container> img:nth-child(n+2):nth-child(-n+4) {
-  border: solid 1px blue;
+.sub-star-container> img:nth-child(2), 
+.sub-star-container>img:nth-child(4){
+  margin: 1%;
 }
+
 
 .stars {
   color: var(--color-Very-Dark-Magenta);
@@ -242,44 +256,76 @@ body{
 
 .bottom-container {
   display: flex;
-  height: 50%;
+  height: 40%;
   width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .reviews{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: var(--color-Very-Dark-Magenta);
-  color: var()
+  height: 40%;
+  width: 27%;
+  padding: 5% 2%;
+}
+
+.reviews:first-child {
+  align-self: flex-start;
+}
+
+.reviews:nth-child(2){
+  align-self: center;
+}
+
+.reviews:nth-child(3){
+  align-self: flex-end;
 }
 
 .card-top {
   display: flex;
   align-items: center;
+  overflow: visible;
 }
 
 .card-top > img {
   border-radius: 50%;
+  height: 80%;
+  margin-right: 7.5%;
 }
 
 .name {
   color: var(--color-LightGrayishMagenta);
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .verified {
   color: var(--color-Soft-Pink);
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .card-bottom {
   color: var(--color-LightGrayishMagenta);
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-top: 5%;
+  overflow: visible;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
 }
 
 footer {
@@ -295,6 +341,6 @@ footer {
 }
 
 .attribution a {
-  color: var(--color-Orange);
+  color: var(--color-Very-Dark-Magenta);
   text-decoration: none;
 }
