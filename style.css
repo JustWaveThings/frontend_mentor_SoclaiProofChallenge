@@ -149,12 +149,138 @@ table {
 
 /* END CSS RESET */
 
-body{
-  display: flex
+body * {
+  border: 3px solid pink;
 }
 
-.container
+body{
+  display: flex;
+  justify-content: center;
+}
 
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-with-copy {
+  width: 50%;
+  height: 100%;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 3.5em;
+  color: var(--color-Very-Dark-Magenta);
+  line-height: 1em;
+  width: 50%;
+}
+
+.heading-copy {
+  font-size: 1.2em;
+  width: 60%;
+  color: var(--color-DarkGrayishMagenta);
+}
+
+.stars-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-star-container {
+  display: flex;
+  height: 8%;
+  width: 80%;
+  background-color: var(--color-LightGrayishMagenta);
+  margin-top: 2%;
+  align-items: center;
+}
+
+.sub-star-container:first-child {
+  align-self: flex-start;
+}
+
+.sub-star-container:nth-child(2) {
+  align-self: center;
+}
+
+.sub-star-container:nth-child(3) {
+  align-self: flex-end;
+}
+
+.sub-star-container > img:first-child {
+  padding-left: 5%;
+}
+.sub-star-container> img:nth-child(5) {
+  padding-right: 5%;
+}
+
+.sub-star-container> img:nth-child(n+2):nth-child(-n+4) {
+  border: solid 1px blue;
+}
+
+.stars {
+  color: var(--color-Very-Dark-Magenta);
+  font-weight: 700;
+  font-size: 1.1em
+  
+}
+
+.bottom-container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.reviews{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-Very-Dark-Magenta);
+  color: var()
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+}
+
+.card-top > img {
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--color-LightGrayishMagenta);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.verified {
+  color: var(--color-Soft-Pink);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.card-bottom {
+  color: var(--color-LightGrayishMagenta);
+  font-weight: 400;
+  font-size: 1.5em;
+}
 
 footer {
   align-self: center;
